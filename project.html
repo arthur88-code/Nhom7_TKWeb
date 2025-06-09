@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/project.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/register.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="logo-section">
+                    <a class="navbar-brand active" href="index.html">
+                        <img class="rounded img-fluid" src="Images/logonhom.jpg" alt="logonhom">
+                    </a>
+                </div>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active text-white" aria-current="page"
+                                    href="index.html">Trang
+                                    chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="about.html">Về chúng tôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="product.html">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="news.html">Tin tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="project.html">Dự án</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="hotline.html">Liên hệ</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <a href="#" class="login-icon ms-auto">
+                    <img src="Images/icon_Dangnhap.png" alt="login" style="max-width: 50px;" class="icon">
+                </a>
+                <a href="#" class="shoppingcart-icon ms-auto text-decoration-none">
+                    <img src="Images/giohang.png" alt="giohang" style="max-width: 70px;" class="icon2 z-1">
+                    <button class="rounded-circle z-2 border-0 bg-secondary-70 text-black p-0 px-2 fs-5" 
+                        style="position: relative; right: 35px; bottom: 16px; ">0</button>
+                </a>
+
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay  -->
+    <div id="authModal" class="modal-overlay" style="display: none;" > 
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="authContent"></div>
+        </div>
+    </div>
+    <!-- MAIN -->
+    <div class="breadcrumb">
+        <button class="breadcrumb-button">
+            <a href="index.html" class="trang-chu-link"> Trang chủ </a>
+            <span class="separator">&gt;</span>
+            <span class="du-an-text"> Dự án </span>
+        </button>
+    </div>
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="images/anh1.jpg" alt="Mặt bằng với căn hộ xanh" class="project-image">
+            </div>
+            <div class="project-info">
+                <div class="project-title">Mặt bằng với căn hộ xanh - chỉ 250 triệu nội thất tại ecopark</div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="images/anh2.jpg" alt="Không gian hiện đại trong căn hộ 100m2" class="project-image">
+            </div>
+            <div class="project-info">
+                <div class="project-title">Không gian hiện đại trong căn hộ 100m2</div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="images/anh3.jpg" alt="Căn hộ hiện đại ngay giữa lòng Sài Gòn" class="project-image">
+            </div>
+            <div class="project-info">
+                <div class="project-title">Căn hộ hiện đại ngay giữa lòng Sài Gòn</div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image-container">
+                <img src="images/anh4.jpg" alt="Phong cách hiện đại, tối giản nhẹ nhàng" class="project-image">
+            </div>
+            <div class="project-info">
+                <div class="project-title">Phong cách hiện đại, tối giản nhẹ nhàng</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="Images/logonhom.jpg">
+            </div>
+            <div class="footer-feedback">
+                <a href="hotline.html">
+                    <button class="feedback-btn">GÓP Ý TỪ BẠN</button>
+                </a>
+                <p>Mỗi đóng góp từ bạn chính là kim chỉ nam để chúng tôi không ngừng thay đổi và cải thiện mỗi ngày</p>
+            </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-content">
+            <!-- Về chúng tôi -->
+            <div class="footer-column">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li>Thông tin</li>
+                    <li>Blog</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+            </div>
+
+            <!-- Chính sách -->
+            <div class="footer-column">
+                <h4>CHÍNH SÁCH KHÁCH HÀNG</h4>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách đổi trả</li>
+                    <li>Bảo mật thông tin</li>
+                    <li>Thanh toán - Giao hàng</li>
+                </ul>
+            </div>
+
+            <!-- Thông tin liên hệ -->
+            <div class="footer-column">
+                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <p>Địa chỉ: Tầng 4, Tòa nhà số xx/yy, Bình Hưng Hòa, Quận Bình Tân, TP. Hồ Chí Minh</p>
+                <p>Hotline: 093.xxx.xxxx</p>
+                <p>Phản ánh chất lượng dịch vụ: 093.xxx.xxxx</p>
+                <p>Email: n7decor@gmail.com</p>
+            </div>
+
+            <!-- Hệ thống cửa hàng -->
+            <div class="footer-column">
+                <h4>HỆ THỐNG CỬA HÀNG</h4>
+                <p><strong>VĂN PHÒNG TP. HCM:</strong> Bình Hưng Hòa, Quận Bình Tân, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/login_register.js"></script>
+    <script src="js/paymentpage.js"></script>
+
+</body>
+
+</html>

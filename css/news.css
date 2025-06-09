@@ -1,0 +1,166 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.breadcrumb{
+    background:#f5e5e5;
+}
+.breadcrumb-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    color: #333; /* Màu chữ mặc định */
+    cursor: default; /* Vì đây có thể không phải là nút tương tác trực tiếp */
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.breadcrumb-button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.separator {
+    margin: 0 5px;
+    color: #777; /* Màu cho dấu '>' */
+}
+
+
+/* Lớp cho phần "Trang chủ" khi nó mờ đi */
+.trang-chu-link {
+    opacity: 0.4;
+}
+.list-group .list-group-item .d-flex img {
+    width: 100px; /* Kích thước chiều rộng ban đầu */
+    height: 70px; /* Kích thước chiều cao ban đầu */
+    object-fit: cover; /* Cắt ảnh để vừa khung */
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng của phần tử cha */
+    max-height: 100%; /* Đảm bảo ảnh không vượt quá chiều cao của phần tử cha */
+    display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+}
+
+/* Responsive (ví dụ: cho màn hình nhỏ hơn) */
+@media (max-width: 576px) {
+    .list-group .list-group-item .d-flex img {
+        width: 80px; /* Thu nhỏ chiều rộng trên màn hình nhỏ */
+        height: 56px; /* Thu nhỏ chiều cao tương ứng */
+    }
+}
+
+
+/* CSS cho màn hình lớn hơn 991px (bố cục ngang ban đầu) */
+/* CSS cho màn hình lớn hơn 991px (bố cục ngang ban đầu) */
+@media (min-width: 992px) {
+    .responsive-card .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .responsive-card .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .responsive-card .col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .responsive-card .responsive-meta {
+        display: block;
+    }
+
+    .responsive-card .responsive-hidden-text {
+        display: block;
+    }
+}
+
+/* CSS cho màn hình medium (từ 768px đến 991px) - Bố cục 2 cột ngang */
+@media (min-width: 768px) and (max-width: 991px) {
+   
+
+
+    .responsive-card .responsive-meta {
+        display: none;
+    }
+
+    .responsive-card .responsive-hidden-text {
+        display: none;
+    }
+    .responsive-card .card-body{
+        font-size:14px;
+    }
+    .responsive-card .card-title{
+        font-size:13px;
+    }
+    .responsive-card img {
+        width: 100px; /* Kích thước chiều rộng ban đầu */
+        height: 70px; /* Kích thước chiều cao ban đầu */
+        object-fit: cover; /* Cắt ảnh để vừa khung */
+        max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng của phần tử cha */
+        max-height: 100%; /* Đảm bảo ảnh không vượt quá chiều cao của phần tử cha */
+    }
+}
+
+/* CSS cho màn hình nhỏ hơn 768px (bố cục dọc) */
+@media (max-width: 767px) {
+    .responsive-card .row {
+        flex-direction: column;
+    }
+
+    
+
+    .responsive-card .responsive-meta {
+        display: none;
+    }
+
+    .responsive-card .responsive-hidden-text {
+        display: none;
+    }
+
+    .responsive-card {
+        width: 95%; /* Hoặc 100% tùy ý */
+        margin-bottom: 20px;
+    }
+}
+
+/* Các kiểu dáng bổ sung cho card (tùy chọn) */
+.responsive-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+    .responsive-card .row {
+        margin: 0;
+    }
+
+    .responsive-card .img-fluid {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .responsive-card .card-body {
+        padding: 15px;
+    }
+
+    .responsive-card .card-title {
+        margin-bottom: 10px;
+    }
+
+    .responsive-card .responsive-meta {
+        margin-bottom: 10px;
+     }

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
+    <link href="css/product.css" rel="stylesheet" />
+    <link href="css/news.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/register.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="logo-section">
+                    <a class="navbar-brand active" href="index.html">
+                        <img class="rounded img-fluid" src="Images/logonhom.jpg" alt="logonhom">
+                    </a>
+                </div>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active text-white" aria-current="page" href="index.html">Trang
+                                    chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="about.html">Về chúng tôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="product.html">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="news.html">Tin tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="project.html">Dự án</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="hotline.html">Liên hệ</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <a href="#" class="login-icon ms-auto">
+                    <img src="Images/icon_Dangnhap.png" alt="login" style="max-width: 50px;" class="icon">
+                </a>
+                <a href="#" class="shoppingcart-icon ms-auto text-decoration-none">
+                    <img src="Images/giohang.png" alt="giohang" style="max-width: 70px;" class="icon2 z-1">
+                    <button class="rounded-circle z-2 border-0 bg-secondary-70 text-black p-0 px-2 fs-5" 
+                        style="position: relative; right: 35px; bottom: 16px; ">0</button>
+                </a>
+
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Overlay  -->
+    <div id="authModal" class="modal-overlay" style="display: none;" > 
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="authContent"></div>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="breadcrumb">
+        <button class="breadcrumb-button">
+            <a href="index.html" class="trang-chu-link"> Trang chủ </a>
+            <span class="separator">&gt;</span>
+            <span class="tin-tuc-text"> Tin tức </span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 ">
+                <div class="card" style="width:95%">
+                    <img src="images/anh1.jpg" alt="Phòng ngủ" class="img-fluid rounded-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Design Talk – Chuyện trò về những xu hướng nội thất
+                        </h5>
+                        <p class="card-text">
+                            Xu hướng chính là những gì được nhiều người quan tâm đến trong một khoảng thời gian nhất
+                            định, trong mọi lĩnh vực chẳng hạn như các trend trên Tiktok hay các show truyền...
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 mt-3 ">
+                        <div class="card mb-3 responsive-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images\anh2.jpg" class="img-fluid rounded-start"
+                                        style="object-fit: cover; height: 100%;" alt="Sofa">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mang làn gió lagom đến không gian sống của bạn</h5>
+                                        <p class="card-text responsive-meta">
+                                            <span class="badge bg-secondary me-2">Tin tức</span>
+                                            <small class="text-muted">10:47 - 30/10/2024</small>
+                                        </p>
+                                        <p class="card-text responsive-hidden-text">Lagom, một thuật ngữ không còn quá
+                                            xa lạ với nhiều người. Lagom bắt nguồn từ Thụy Điển, một trong những quốc
+                                            gia hạnh phúc nhất thế giới. Ý tưởng mang phong...</p>
+                                        <p class="card-text responsive-visible-text-small">Lagom, một thuật ngữ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-6 mt-3 ">
+
+
+                        <div class="card mb-3 responsive-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/anh3.jpg" class="img-fluid rounded-start"
+                                        style="object-fit: cover; height: 100%;" alt="Nội thất gỗ sồi">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nội thất gỗ sồi - sự giao thoa của vẻ đẹp và chất lượng
+                                        </h5>
+                                        <p class="card-text responsive-meta">
+                                            <span class="badge bg-secondary me-2">Tin tức</span>
+                                            <small class="text-muted">10:46 - 30/10/2024</small>
+                                        </p>
+                                        <p class="card-text responsive-hidden-text">Ngày nay, xu hướng tìm về vẻ đẹp đơn
+                                            giản, bền vững, gần gũi với thiên nhiên càng trở nên phổ biến. Gỗ đã không
+                                            đơn thuần chỉ là một chất liệu, mà nó đã trở...</p>
+                                        <p class="card-text responsive-visible-text-small">Ngày nay, xu hướng tìm về vẻ
+                                            đẹp đơn giản...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-6 mt-3 ">
+                        <div class="card mb-3 responsive-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="Images/camhung.jpg" class="img-fluid rounded-start"
+                                        style="object-fit: cover; height: 100%;" alt="Cây giả decor"
+                                        style="width:300px">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ý tưởng trang trí cây giả decor trong nội thất xu hướng
+                                            hót</h5>
+                                        <p class="card-text responsive-meta">
+                                            <span class="badge bg-secondary me-2">Tin tức</span>
+                                            <small class="text-muted">10:43 - 30/10/2024</small>
+                                        </p>
+                                        <p class="card-text responsive-hidden-text">Cây giả decor đã trở thành một phần
+                                            quan trọng trong việc tạo không gian sống và làm việc thú vị hơn. Với sự
+                                            tiện lợi và tính thẩm mỹ cao, những chiếc cây giả không...</p>
+                                        <p class="card-text responsive-visible-text-small">Cây giả decor đã trở thành
+                                            một phần quan trọng...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-6 mt-3 ">
+                        <div class="card mb-3 responsive-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="Images/khungcanh.jpg" class="img-fluid rounded-start"
+                                        style="object-fit: cover; height: 100%;" alt="Đèn trang trí">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4 nguyên tắc lựa chọn đèn trang trí bạn nên biết</h5>
+                                        <p class="card-text responsive-meta">
+                                            <span class="badge bg-secondary me-2">Tin tức</span>
+                                            <small class="text-muted">10:42 - 30/10/2024</small>
+                                        </p>
+                                        <p class="card-text responsive-hidden-text">Việc thiết kế hệ thống đèn chiếu
+                                            sáng nội thất trong gia đình thì lựa chọn đèn chiếu sáng và trang trí rất
+                                            quan trọng. Không chỉ đảm bảo chất lượng chiếu sáng mà còn...</p>
+                                        <p class="card-text responsive-visible-text-small">Việc thiết kế hệ thống đèn
+                                            chiếu sáng nội thất...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <ul class="nav flex-column ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-secondary" href="#">DANH MỤC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="project.html">Dự án</a>
+                    </li>
+                </ul>
+                <hr class="d-md-block d-none">
+                <h3> BÀI VIẾT MỚI NHẤT</h3>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="images/anh1.jpg" alt="Bài viết 1" class="me-2">
+                            Design Talk - Chuyện trò về những xu...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="images/anh2.jpg" alt="Bài viết 2" class="me-2">
+                            Mang làn gió Lagom đến không gian sống...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="images\anh3.jpg" alt="Bài viết 3" class="me-2">
+                            Nội thất gỗ sồi - sự giao thoa cho vẽ đẹp...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="Images/camhung.jpg" alt="Bài viết 4" class="me-2">
+                            Ý tưởng trang trí cây giả decor trong nội...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="Images/khungcanh.jpg" alt="Bài viết 5" class="me-2">
+                            4 nguyên tắc lựa chọn đèn trang cho trí cho bạn...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="Images/ghexam.jpg" alt="Bài viết 6" class="me-2">
+                            Bí quyết chọn sofa cho phòng khách nhỏ...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="Images/gheao.jpg" alt="Bài viết 7" class="me-2">
+                            ghế sofa bộ rời phù hợp với không gian...
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <img src="Images/anhcuoi.jpg" alt="Bài viết 8" class="me-2">
+                            hướng dẫn tự decor phòng ngủ đẹp
+                        </div>
+                    </a>
+                    <img src="Images/banner_sofa_don_1024x1950.jpeg" style="width:90%" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="Images/logonhom.jpg">
+            </div>
+            <div class="footer-feedback">
+                <a href="hotline.html">
+                    <button class="feedback-btn">GÓP Ý TỪ BẠN</button>
+                </a>
+                <p>Mỗi đóng góp từ bạn chính là kim chỉ nam để chúng tôi không ngừng thay đổi và cải thiện mỗi ngày</p>
+            </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-content">
+            <!-- Về chúng tôi -->
+            <div class="footer-column">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li>Thông tin</li>
+                    <li>Blog</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+            </div>
+
+            <!-- Chính sách -->
+            <div class="footer-column">
+                <h4>CHÍNH SÁCH KHÁCH HÀNG</h4>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách đổi trả</li>
+                    <li>Bảo mật thông tin</li>
+                    <li>Thanh toán - Giao hàng</li>
+                </ul>
+            </div>
+
+            <!-- Thông tin liên hệ -->
+            <div class="footer-column">
+                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <p>Địa chỉ: Tầng 4, Tòa nhà số xx/yy, Bình Hưng Hòa, Quận Bình Tân, TP. Hồ Chí Minh</p>
+                <p>Hotline: 093.xxx.xxxx</p>
+                <p>Phản ánh chất lượng dịch vụ: 093.xxx.xxxx</p>
+                <p>Email: n7decor@gmail.com</p>
+            </div>
+
+            <!-- Hệ thống cửa hàng -->
+            <div class="footer-column">
+                <h4>HỆ THỐNG CỬA HÀNG</h4>
+                <p><strong>VĂN PHÒNG TP. HCM:</strong> Bình Hưng Hòa, Quận Bình Tân, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/login_register.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/paymentpage.js"></script>
+
+</body>
+
+</html>

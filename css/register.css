@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+.input_rg{
+    margin-left: -55px;
+    height: 38px;
+}
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn-register {
+    background-color: #a3632b;
+    color: white;
+    border: none;
+}
+
+.btn-register:hover {
+    background-color: #854f22;
+}
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.position-relative {
+    position: relative;
+}

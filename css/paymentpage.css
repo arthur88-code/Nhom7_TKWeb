@@ -1,0 +1,40 @@
+table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .btn-remove{
+      cursor: pointer;
+      padding: 6px 12px;
+      background-color: #ff4c4c;
+      border: none;
+      color: white;
+      border-radius: 3px;
+    }
+    .btn-remove:hover {
+      background-color: #ff0000;
+    }
+    .total {
+      font-weight: bold;
+      text-align: right;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .empty-msg {
+      text-align: center;
+      font-size: 1.2em;
+      color: #666;
+    }
+    .btn-outline-success{
+      position:relative;
+      left: 88%;
+    }
+    

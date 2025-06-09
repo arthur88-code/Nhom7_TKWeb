@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/register.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="logo-section">
+                    <a class="navbar-brand active" href="index.html">
+                        <img class="rounded img-fluid" src="Images/logonhom.jpg" alt="logonhom">
+                    </a>
+                </div>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active text-white" aria-current="page"
+                                    href="index.html">Trang
+                                    chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="about.html">Về chúng tôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="product.html">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="news.html">Tin tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="project.html">Dự án</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 text-white" href="hotline.html">Liên hệ</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <a href="#" class="login-icon ms-auto">
+                    <img src="Images/icon_Dangnhap.png" alt="login" style="max-width: 50px;" class="icon">
+                </a>
+                <a href="#" class="shoppingcart-icon ms-auto text-decoration-none">
+                    <img src="Images/giohang.png" alt="giohang" style="max-width: 70px;" class="icon2 z-1">
+                    <button class="rounded-circle z-2 border-0 bg-secondary-70 text-black p-0 px-2 fs-5" 
+                        style="position: relative; right: 35px; bottom: 16px; ">0</button>
+                </a>
+
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Overlay  -->
+    <div id="authModal" class="modal-overlay" style="display: none;" > 
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="authContent"></div>
+        </div>
+    </div>
+    <div class="container-fluid info-content">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <!-- Content -->
+                <div class="content">
+                    <h1 class="title mb-5 text-white">
+                        <span style="color: #ffde59;">Nội thất</span>
+                        nâng tầm không gian sống
+                    </h1>
+                    <p class="text-white fs-5">
+                        Khám phá nội thất thiết kế đương địa mang đến
+                        cảm giác thoải mái, sang trọng. Cá nhân hóa
+                        trong từng sản phẩm phù hợp mọi không gian sống.
+                    </p>
+                    <button class="btn mt-4">
+                        <a href="product.html" class="text-decoration-none d-flex">
+                            <img src="Images/muahang.png" width="30">
+                            <p class="text-black position-relative">Mua sắm ngay</p>
+
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <img src="Images/ban-ghe-content.jpg" width="100%" id="jump-img" class="pic-content">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sản phẩm đặc biệt -->
+    <div class="featured-products p-2 g-5">
+        <div class="container py-5">
+            <div class="row align-items-start">
+                <div class="col-md-3">
+                    <h2 class="section-title mb-4">Các dòng<br>sản phẩm<br>nổi bật</h2>
+                    <div class="carousel-controls">
+                        <button>&lt;</button>
+                        <button>&gt;</button>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div id="product-container" class="row g-4">
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-md-4 product-item">
+                            <div class="product-card">
+                                <div class="card-left text-white p-4">
+                                    <h5>TỦ</h5>
+                                    <p>Tủ phòng khách,<br>phòng ngủ</p>
+                                    <a href="product.html" class="text-white fw-bold text-decoration-none">Xem thêm
+                                        →</a>
+                                </div>
+                                <div class="card-right">
+                                    <img src="Images/tu_tt.jpg" alt="Tủ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-md-4 product-item">
+                            <div class="product-card">
+                                <div class="card-left text-white p-4">
+                                    <h5>GIƯỜNG</h5>
+                                    <p>Giường đa<br>phong cách</p>
+                                    <a href="product.html" class="text-white fw-bold text-decoration-none">Xem thêm
+                                        →</a>
+                                </div>
+                                <div class="card-right">
+                                    <img src="Images/giuong_tt.jpg" alt="Giường">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-md-4 product-item">
+                            <div class="product-card">
+                                <div class="card-left text-white p-4">
+                                    <h5>GHẾ</h5>
+                                    <p>Chất liệu gỗ,<br>nhôm, nhựa</p>
+                                    <a href="product.html" class="text-white fw-bold text-decoration-none">Xem thêm
+                                        →</a>
+                                </div>
+                                <div class="card-right">
+                                    <img src="Images/ghe_tt.jpg" alt="Ghế">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 4 -->
+                        <div class="col-md-4 product-item">
+                            <div class="product-card">
+                                <div class="card-left text-white p-4">
+                                    <h5>BÀN</h5>
+                                    <p>Chất liệu gỗ,<br>nhôm, nhựa</p>
+                                    <a href="product.html" class="text-white fw-bold text-decoration-none">Xem thêm
+                                        →</a>
+                                </div>
+                                <div class="card-right">
+                                    <img src="Images/ban_tt.jpg" alt="bàn">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 5 -->
+                        <div class="col-md-4 product-item">
+                            <div class="product-card">
+                                <div class="card-left text-white p-4">
+                                    <h5>SOFA</h5>
+                                    <p>Ghế sofa vải<br>và ghế sofa <br> dài</p>
+                                    <a href="product.html" class="text-white fw-bold text-decoration-none">Xem thêm
+                                        →</a>
+                                </div>
+                                <div class="card-right">
+                                    <img src="Images/sofa_tt.jpg" alt="sofa">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 6 -->
+                        <div class="col-md-4 product-item">
+                            <div class="product-card">
+                                <div class="card-left text-white p-4">
+                                    <h5>ĐÈN</h5>
+                                    <p>Đèn trang trí <br>nội thất</p>
+                                    <a href="product.html" class="text-white fw-bold text-decoration-none">Xem thêm
+                                        →</a>
+                                </div>
+                                <div class="card-right">
+                                    <img src="Images/den.jpg" alt="Đèn">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BỘ SƯU TẬP -->
+    <div class="container-fluid bg-white text-center">
+        <h2 class="collection-title mt-5 mb-4 fw-bold fs-2 ">Bộ sưu tập</h2>
+
+        <div class="collection-filters mb-5">
+            <button class="filter-btn">Hiện đại</button>
+            <button class="filter-btn">Cổ điển</button>
+            <button class="filter-btn">Đơn giản</button>
+            <button class="filter-btn">Sang trọng</button>
+        </div>
+
+        <div class="container">
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card shadow rounded-4 " style="width: 322px;">
+                        <div class="card-discount p-1 text-white">-6%</div>
+                        <div class="coll-img">
+                            <img src="Images/bosuutap1.jpg" alt="Sofa Hàn Quốc" class="card-image rounded" />
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ghế sofa văng da Hàn Quốc hiện đại thanh lịch</h3>
+                            <p class="card-price-old">36,000,000 VND</p>
+                            <p class="card-price-new">34,000,000 VND</p>
+                            <button class="card-btn add-to-cart" data-id="SP001" data-name="Ghế sofa văng da Hàn Quốc TC 1 " data-price="34000000">🛒 Thêm giỏ hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card shadow rounded-4 " style="width: 322px;">
+                        <div class="card-discount p-1 text-white">-22%</div>
+                        <div class="coll-img d-block">
+                            <img src="Images/bosuutap2.jpg" alt="Sofa Mỹ SF007" class="card-image" />
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Sofa Phong Cách Mỹ SF007-123</h3>
+                            <p class="card-price-old">45,000,000 VND</p>
+                            <p class="card-price-new">35,000,000 VND</p>
+                            <button class="card-btn add-to-cart" data-id="SP002" data-name="Sofa Phong Cách Mỹ TC 1 " data-price="35000000">🛒 Thêm giỏ hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card shadow rounded-4 " style="width: 322px;">
+                        <div class="card-discount p-1 text-white">-6%</div>
+                        <div class="coll-img">
+                            <img src="Images/bosuutap3.jpg" alt="Sofa Mỹ SF618" class="card-image" />
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Sofa Phong Cách Mỹ SF618015-123</h3>
+                            <p class="card-price-old">6,000,000 VND</p>
+                            <p class="card-price-new">5,600,000 VND</p>
+                            <button class="card-btn add-to-cart" data-id="SP003" data-name="Sofa Phong Cách Mỹ TC 2 " data-price="5600000">🛒 Thêm giỏ hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card shadow rounded-4 " style="width: 322px;">
+                        <div class="card-discount p-1 text-white">-20%</div>
+                        <div class="coll-img">
+                            <img src="Images/bosuutap4.jpg" alt="Sofa góc L" class="card-image" />
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Sofa góc L – Thiết kế đơn giản, hiện đại</h3>
+                            <p class="card-price-old">3,750,000 VND</p>
+                            <p class="card-price-new">3,000,000 VND</p>
+                            <button class="card-btn add-to-cart" data-id="SP004" data-name="Sofa góc L TC 1 " data-price="3000000">🛒 Thêm giỏ hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần cảm hứng nội thất -->
+    <div class="container my-5">
+        <div class="banner-home position-relative overflow-hidden rounded-4 p-3">
+            <img src="Images/camhung.jpg" alt="Ảnh bộ sưu tập nội thất"
+                class="banner-background w-100 h-100 position-absolute top-0 start-0">
+
+            <div class="banner-content position-relative text-white text-center px-4 py-5">
+                <h1 class="banner-title mb-4">BỘ SƯU TẬP NỘI THẤT ĐỈNH CAO</h1>
+                <p class="banner-slogan fs-5">
+                    Từ phòng khách hiện đại đến phòng ngủ ấm cúng, mỗi sản phẩm được chọn lọc để
+                    mang lại sự tinh tế, tiện nghi và sang trọng cho không gian sống của bạn.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nội thất -->
+    <div class="container-fluid m-5">
+        <div class="row g-2 justify-content-center">
+            <div class="col-auto">
+                <div class="card shadow rounded-4" style="width: 322px;">
+                    <div class="card-discount p-1 text-white">
+                        -6%
+                    </div>
+                    <div class="coll-img">
+                        <img src="Images/bosuutap1.jpg" alt="Sofa Hàn Quốc" class="card-image rounded w-100" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Ghế sofa văng da Hàn Quốc hiện đại thanh lịch</h3>
+                        <p class="card-price-old">36,000,000 VND</p>
+                        <p class="card-price-new">34,000,000 VND</p>
+                        <button class="card-btn add-to-cart" data-id="SP005" data-name="Ghế sofa văng da Hàn Quốc TC 2 " data-price="34000000">🛒 Thêm giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-auto">
+                <div class="card shadow rounded-4" style="width: 322px;">
+                    <div class="card-discount p-1 text-white">
+                        -22%
+                    </div>
+                    <div class="coll-img">
+                        <img src="Images/bosuutap2.jpg" alt="Sofa Mỹ SF007" class="card-image rounded w-100" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Sofa Phong Cách Mỹ SF007-123</h3>
+                        <p class="card-price-old">45,000,000 VND</p>
+                        <p class="card-price-new">35,000,000 VND</p>
+                        <button class="card-btn add-to-cart " data-id="SP006" data-name="Sofa Phong Cách Mỹ TC 3 " data-price="35000000">🛒 Thêm giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Promo card -->
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="promo-card position-relative overflow-hidden rounded-4">
+                    <img src="Images/noithat.jpg"
+                        class="promo-background w-100 h-100 position-absolute top-0 start-0" />
+                    <div class="promo-content position-absolute text-start">
+                        <h3 class="text-warning">Nội thất phòng khách</h3>
+                        <a href="product.html" class="text-white text-decoration-none">Xem thêm →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row g-2 justify-content-center product-slider2">
+            <!-- Promo card -->
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="promo-card position-relative overflow-hidden rounded-4">
+                    <img src="Images/nhabep.jpg" class="promo-background w-100 h-100 position-absolute top-0 start-0" />
+                    <div class="promo-content position-absolute text-start">
+                        <h3 class="text-warning">Nội thất phòng bếp</h3>
+                        <a href="product.html" class="text-white text-decoration-none">Xem thêm →</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 1 -->
+            <div class="col-auto product2">
+                <div class="card shadow rounded-4" style="width: 322px;">
+                    <div class="card-discount p-1 text-white">
+                        -6%
+                    </div>
+                    <div class="coll-img">
+                        <img src="Images/bosuutap3.jpg" alt="Sofa Hàn Quốc" class="card-image rounded w-100" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Sofa Phong Cách Mỹ SF618015-123</h3>
+                        <p class="card-price-old">6,000,000 VND</p>
+                        <p class="card-price-new">5,600,000 VND</p>
+                        <button class="card-btn add-to-cart" data-id="SP007" data-name="Sofa Phong Cách Mỹ TC 4 " data-price="5600000">🛒 Thêm giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-auto">
+                <div class="card shadow rounded-4" style="width: 322px;">
+                    <div class="card-discount p-1 text-white">
+                        -22%
+                    </div>
+                    <div class="coll-img">
+                        <img src="Images/bosuutap4.jpg" alt="Sofa Mỹ SF007" class="card-image rounded w-100" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Sofa góc L – Thiết kế đơn giản, hiện đại</h3>
+                        <p class="card-price-old">3,750,000 VND</p>
+                        <p class="card-price-new">3,000,000 VND</p>
+                        <button class="card-btn add-to-cart" data-id="SP008" data-name="Sofa góc L TC 4 " data-price="3000000">🛒 Thêm giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Đánh giá -->
+    <div class="testimonials py-5 text-center">
+        <div class="container">
+            <div class="testimonials-header mb-5">
+                <h1 class="fw-bold display-5">Khách hàng đánh giá</h1>
+                <p class="fs-5 text-secondary">
+                    Hơn 1.000 khách hàng đã hài lòng về dịch vụ và sản phẩm của chúng tôi
+                </p>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card bg-white p-4 rounded-4 shadow-sm text-start h-100">
+                        <p class="testimonial-text">
+                            N7!Decor cung cấp nhiều tính năng hữu ích như quản lý sản phẩm, đơn hàng, và tích hợp thanh
+                            toán
+                            trực tuyến,
+                            giúp việc kinh doanh trở nên thuận tiện và hiệu quả hơn.
+                        </p>
+                        <div class="testimonial-profile d-flex align-items-center gap-3">
+                            <img src="Images/danhgia1.jpg" alt="Anh Tùng" class="rounded-circle" width="60" height="60">
+                            <div class="profile-info">
+                                <strong class="fs-6">Anh Tùng</strong>
+                                <p class="mb-0 text-secondary">Đại diện công ty ABC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card bg-white p-4 rounded-4 shadow-sm text-start h-100">
+                        <p class="testimonial-text">
+                            Nhờ vào cấu trúc website tối ưu hóa SEO mà N7!Decor thiết kế, trang web của tôi đã có thứ
+                            hạng cao
+                            hơn trên
+                            các công cụ tìm kiếm, kéo theo lượng truy cập tăng đáng kể.
+                        </p>
+                        <div class="testimonial-profile d-flex align-items-center gap-3">
+                            <img src="Images/danhgia2.jpg" alt="Chị Thảo My" class="rounded-circle" width="60"
+                                height="60">
+                            <div class="profile-info">
+                                <strong class="fs-6">Chị Thảo My</strong>
+                                <p class="mb-0 text-secondary">Đại diện công ty MDS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card bg-white p-4 rounded-4 shadow-sm text-start h-100">
+                        <p class="testimonial-text">
+                            N7!Decor cung cấp nhiều tính năng hữu ích, đáp ứng đầy đủ nhu cầu của doanh nghiệp. Thời
+                            gian triển
+                            khai dự án
+                            nhanh chóng, đảm bảo đúng tiến độ và yêu cầu của tôi.
+                        </p>
+                        <div class="testimonial-profile d-flex align-items-center gap-3">
+                            <img src="Images/danhgia3.jpg" alt="Chị Thảo Vân Anh" class="rounded-circle" width="60"
+                                height="60">
+                            <div class="profile-info">
+                                <strong class="fs-6">Chị Thảo Vân Anh</strong>
+                                <p class="mb-0 text-secondary">Giám đốc công ty CDD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="Images/logonhom.jpg">
+            </div>
+            <div class="footer-feedback">
+                <a href="hotline.html">
+                    <button class="feedback-btn">GÓP Ý TỪ BẠN</button>
+                </a>
+                <p>Mỗi đóng góp từ bạn chính là kim chỉ nam để chúng tôi không ngừng thay đổi và cải thiện mỗi ngày</p>
+            </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-content">
+            <!-- Về chúng tôi -->
+            <div class="footer-column">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li>Thông tin</li>
+                    <li>Blog</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+            </div>
+
+            <!-- Chính sách -->
+            <div class="footer-column">
+                <h4>CHÍNH SÁCH KHÁCH HÀNG</h4>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách đổi trả</li>
+                    <li>Bảo mật thông tin</li>
+                    <li>Thanh toán - Giao hàng</li>
+                </ul>
+            </div>
+
+            <!-- Thông tin liên hệ -->
+            <div class="footer-column">
+                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <p>Địa chỉ: Tầng 4, Tòa nhà số xx/yy, Bình Hưng Hòa, Quận Bình Tân, TP. Hồ Chí Minh</p>
+                <p>Hotline: 093.xxx.xxxx</p>
+                <p>Phản ánh chất lượng dịch vụ: 093.xxx.xxxx</p>
+                <p>Email: n7decor@gmail.com</p>
+            </div>
+
+            <!-- Hệ thống cửa hàng -->
+            <div class="footer-column">
+                <h4>HỆ THỐNG CỬA HÀNG</h4>
+                <p><strong>VĂN PHÒNG TP. HCM:</strong> Bình Hưng Hòa, Quận Bình Tân, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/login_register.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/paymentpage.js"></script>
+
+</body>
+
+</html>
