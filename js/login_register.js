@@ -99,7 +99,8 @@ function onLoginSuccess(username) {
     loginIcon.innerHTML = `
         <div class="user-info dropdown text-center ms-auto">
             <img src="Images/icon_Dangnhap.png" alt="login" style="max-width: 35px; cursor: pointer;" class="icon d-block mx-auto dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="username d-block mt-1 fw-semibold text-white text-uppercase text-end">${username}</span>
+            <span class="username dropdown-toggle d-block mt-1 fw-semibold text-white text-uppercase text-end" 
+                data-bs-toggle="dropdown" aria-expanded="false" style="cursor:pointer;">${username}</span>
             <ul class="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="userDropdown">
                 <li><a class="dropdown-item" href="#" onclick="logoutUser()">Đăng xuất</a></li>
             </ul>
